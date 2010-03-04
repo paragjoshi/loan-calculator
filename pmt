@@ -1,0 +1,36 @@
+#!/usr/bin/ruby
+# This is a simple program to calculate loan payments with a simple command-line interface.
+#Copyright (C) 2010, Author: Parag Joshi 
+#
+#This program is free software: you can redistribute it and/or modify
+#it under the terms of the GNU AGPLv3 (Affero General Public License version 3) as
+#published by the Free Software Foundation
+#
+#This program is distributed in the hope that it will be useful,
+#but WITHOUT ANY WARRANTY; without even the implied warranty of
+#MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#GNU Affero General Public License for more details.
+#
+#You should have received a copy of the GNU Affero General Public License
+#along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+
+endif (ARGV.length == 0) 
+  puts "Usage: ./pmt <LoanAmt> [Rate] [LoanDurationMonth/Years] [TaxRate]\n"
+       "Default duration is in years but you can specify in months by adding m at the end.\n"
+       "All parameters in [] are optional. LoanAmt is the only required parameter."
+       "Example: ./pmt 25000 18m"
+  exit
+end
+PV = ARGV[0]
+i = (ARGV[1] || 6).to_f/1200
+n = (ARGV[2] || 30).to_i*12 # Duration in months, default 30 years
+if (ARGV[2] && ARGV[2] =~ /(\d+)m/); n = $1.to_i; end
+puts "Principal=" + ARGV[0]
+puts "Interest Rate=" + (i*1200).to_s
+
+tax = (PV.to_i*0.01/12) # Default tax rate of 1%
+pmt = PV.to_i /  ((1- (1 / (1 + i)**n )) / i)
+puts ("Loan Payment=" + pmt.to_s)
+puts ("Tax=" + tax.to_s)
+puts ("Total=" + (pmt+tax).to_s)

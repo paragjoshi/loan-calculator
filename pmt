@@ -33,4 +33,4 @@ tax = (PV.to_i*0.01/12) # Default tax rate of 1%
 pmt = PV.to_i /  ((1- (1 / (1 + i)**n )) / i)
 puts ("Loan Payment=" + pmt.to_s)
 puts ("Tax=" + tax.to_s)
-puts ("Total=" + (pmt+tax).to_s)
+puts ("Total Payment(including tax)=" + (pmt+tax).to_s)

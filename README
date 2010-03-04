@@ -6,6 +6,11 @@ is way faster than lauching browser, going to a website and finding your way aro
 
 This simple program is implemented in Ruby and also can serve as an example ruby program while being a little more advanced than commonly known Hello World program! 
 
+System Requirements: 
+You need a Ruby interpreter to run this program. 
+On Debian / Ubuntu run: 
+sudo apt-get install ruby
+
 Usage: 
 ./pmt <LoanAmt> [Rate] [LoanDurationMonth/Years] [TaxRate]
 All parameters in [] are optional. LoanAmt is the only required parameter.

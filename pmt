@@ -15,10 +15,10 @@
 #along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 
-endif (ARGV.length == 0) 
-  puts "Usage: ./pmt <LoanAmt> [Rate] [LoanDurationMonth/Years] [TaxRate]\n"
-       "Default duration is in years but you can specify in months by adding m at the end.\n"
-       "All parameters in [] are optional. LoanAmt is the only required parameter."
+if (ARGV.length == 0) 
+  puts "Usage: ./pmt <LoanAmt> [Rate] [LoanDurationMonth/Years] [TaxRate]\n" + 
+       "Default duration is in years but you can specify in months by adding m at the end.\n" + 
+       "All parameters in [] are optional. LoanAmt is the only required parameter." +
        "Example: ./pmt 25000 18m"
   exit
 end

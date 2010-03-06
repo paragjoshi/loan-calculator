@@ -28,7 +28,7 @@ c:/>  ruby ./pmt <LoanAmt> [Rate] [LoanDuration][Month/Years] [TaxRate]
 
 All parameters in <code>[]</code> are optional. <code>LoanAmt</code> is the only required parameter.
 
-By default, <code>LoanDuration</code> is considered in years but you can specify in months by adding <code>m</code> at the end.  For instance, a value 15 would be 15 years but 16m would be considered 16 months.
+By default, <code>LoanDuration</code> is considered in years but you can specify in months by adding <code>m</code> at the end.  For instance, a value <code>15</code> would be 15 years but <code>16m</code> would be considered 16 months.
 
 <code>TaxRate</code> is used for loan transactions where tax may be applied as a percentage of the loan amount. For instance, in the case of real estate purchase, typically property tax is payable as a percentage of purchase price of home. When a down payment is made, the house value considered would be different than the loan principal amount.
 

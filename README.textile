@@ -35,27 +35,50 @@ By default, <code>LoanDuration</code> is considered in years but you can specify
 h3.  Default values
 
 If the optional parameters are not supplied the following default values are taken:
+
+table{border:1px solid black}. | _. Parameter | _. Default Value |
+| Rate | 6% |
+
 Rate: 6%
-Duration: 30 years
-Tax Rate: 1%
+| Duration | 30 years |
+| Tax Rate | 1% |
+
 
 h1.  Examples
 
 h3.  Example 1:
-
 <pre>
-./pmt 450000  5.5  20 
+$   ./pmt 450000  5.5  20 
 </pre>
 
 This would compute the loan payment and tax on 450,000 (in your favorite currency) at 5.5% per year interest rate for a 20 year loan duration.
 
-h3.  Example 2:
-
+The following would be the output:
 <pre>
-./pmt 450000 5.5 36m 2 
+	Principal=450000
+	Interest Rate=5.5
+	Loan Payment=3095.49288536656
+	Tax=375.0
+	Total Payment(including tax)=3470.49288536656
+</pre>
+
+
+h3.  Example 2:
+<pre>
+$   ./pmt 450000 5.5 36m 2 
 </pre>
 
 This would calculate the same loan for 36 months duration with 2% tax rate. 
+
+The following would be the output:
+<pre>
+	Principal=450000
+	Interest Rate=5.5
+	Loan Payment=13588.1558119395
+	Tax=375.0
+	Total Payment(including tax)=13963.1558119395
+</pre>
+
 
 h1.  License
 

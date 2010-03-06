@@ -36,10 +36,8 @@ h3.  Default values
 
 If the optional parameters are not supplied the following default values are taken:
 
-table{border:1px solid black}. | _. Parameter | _. Default Value |
+| *Parameter* | *Default Value* |
 | Rate | 6% |
-
-Rate: 6%
 | Duration | 30 years |
 | Tax Rate | 1% |
 
